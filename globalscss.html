@@ -1,0 +1,36 @@
+//To create a dark and light mode in an Ionic app, you can use the CSS @media query and prefers-color-scheme media feature to detect the user's preferred color scheme and apply the appropriate styles. The global CSS styles can be added to the global.scss file.
+
+//Here's an example of how you could implement a dark and light mode in Ionic using global.scss:
+//Carl Andrew Castanas
+// Define the light and dark theme colors
+$light-theme-color: #FFFFFF;
+$dark-theme-color: #000000;
+
+// Detect the user's preferred color scheme and apply the appropriate theme
+@media (prefers-color-scheme: light) {
+  :root {
+    --ion-color-primary: $light-theme-color;
+    --ion-color-secondary: $light-theme-color;
+    --ion-color-tertiary: $light-theme-color;
+    --ion-color-success: $light-theme-color;
+    --ion-color-warning: $light-theme-color;
+    --ion-color-danger: $light-theme-color;
+    --ion-color-dark: $light-theme-color;
+    --ion-color-medium: $light-theme-color;
+    --ion-color-light: $light-theme-color;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ion-color-primary: $dark-theme-color;
+    --ion-color-secondary: $dark-theme-color;
+    --ion-color-tertiary: $dark-theme-color;
+    --ion-color-success: $dark-theme-color;
+    --ion-color-warning: $dark-theme-color;
+    --ion-color-danger: $dark-theme-color;
+    --ion-color-dark: $dark-theme-color;
+    --ion-color-medium: $dark-theme-color;
+    --ion-color-light: $dark-theme-color;
+  }
+}
